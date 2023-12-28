@@ -1,0 +1,95 @@
+﻿<Page x:Class="LoginApp.SignUp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoginApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800" Background="#3AADA1"
+      Title="SignUp">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border CornerRadius="10 0 0 10">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#3AA9AD" Offset="0"/>
+                    <GradientStop Color="#3AADA1" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Canvas>
+                    <Polygon Points="0,20,230,140 0,270" Fill="#4EB1B6"/>
+                    <Polygon Points="100,400,200,370 180,470" Fill="#4EB1B6"/>
+                    <Ellipse Margin="250 450 0 0" Width="40" Height="40" Fill="#4EB1B6"/>
+                    <Ellipse Margin="50 400 0 0" Width="20" Height="20" Fill="#4EB1B6"/>
+
+                </Canvas>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Inscription" Style="{StaticResource titleText}" />
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource textHint}" Text="Name" />
+                        <TextBox x:Name="txtName" Style="{StaticResource textBox}"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource textHint}" Text="Surname" />
+                        <TextBox x:Name="txtSurname" Style="{StaticResource textBox}" />
+                    </StackPanel>
+
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource textHint}" Text="Age" />
+                        <TextBox x:Name="txtAge" Style="{StaticResource textBox}" />
+                    </StackPanel>
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource textHint}" Text="Mail" />
+                        <TextBox x:Name="txtmail" Style="{StaticResource textBox}" />
+                    </StackPanel>
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource textHint}" Text="Subscription" />
+                        <ComboBox x:Name="subscriptionComboBox" Style="{StaticResource textBox}">
+                            <ComboBoxItem Content="Premium +" Tag="1"></ComboBoxItem>
+                            <ComboBoxItem Content="Economique" Tag="2"></ComboBoxItem>
+                                <ComboBoxItem Content="Premium" Tag="3"></ComboBoxItem>
+                                    <ComboBoxItem Content="Classique" Tag="4"></ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource textHint}" Text="Password" />
+                        <PasswordBox x:Name="txtPassword" Style="{StaticResource textBox}" Password="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="10" Width="300" HorizontalAlignment="Right"/>
+
+                    <Button Content="Create" Style="{StaticResource mainbutton}" Click="CreateButton" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0 10 10 0" MouseDown="Border_MouseDown">
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
+                <Button Content="Back" Style="{StaticResource mainbutton}" Height="53" Width="76" Margin="-00,-405,0,0" Click="Backbutton" />
+                <Image Source="/image/signup.png" Width="477" Height="490"/>
+                <Image Source="/image/IncMusic1.png" Width="446" Height="52" Margin="-500,0,0,-400"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+
+</Page>
