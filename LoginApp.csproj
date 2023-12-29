@@ -173,16 +173,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Buy_songs.xaml.cs">
+      <DependentUpon>Buy_songs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page0.xaml.cs">
       <DependentUpon>Page0.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page3.xaml.cs">
       <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Podcast.xaml.cs">
+      <DependentUpon>Podcast.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Songs.xaml.cs">
+      <DependentUpon>Songs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="songs_librairy.xaml.cs">
+      <DependentUpon>songs_librairy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <Page Include="Buy_songs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -207,7 +223,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Podcast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Songs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="songs_librairy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

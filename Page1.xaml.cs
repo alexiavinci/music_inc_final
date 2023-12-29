@@ -52,7 +52,6 @@ namespace LoginApp
         {
             // Votre chaîne de connexion à la base de données
             string connectionString = "server=localhost;user=root;password=root;database=MusicPlatform";
-;
 
             // Récupérer les valeurs des TextBox et PasswordBox
             string email = txtEmail.Text;
@@ -64,7 +63,11 @@ namespace LoginApp
                 var user = User.AuthenticateUser(connectionString, email, password);
                 if (user != null)
                 {
-                    MessageBox.Show("Successfully signed in!");
+                    // Stocker l'utilisateur connecté dans la session
+                    SessionManager.Login(user);
+
+                    Page3 page3 = new Page3();
+                    this.NavigationService.Navigate(page3);
                 }
                 else
                 {
@@ -104,4 +107,20 @@ namespace LoginApp
             this.NavigationService.Navigate(signUp);
         }
     }
+
+    public static class SessionManager
+    {
+        public static User CurrentUser { get; private set; }
+
+        public static void Login(User user)
+        {
+            CurrentUser = user;
+        }
+
+        public static void Logout()
+        {
+            CurrentUser = null;
+        }
+    }
+
 }

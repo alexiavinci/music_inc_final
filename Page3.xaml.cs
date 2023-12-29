@@ -25,5 +25,24 @@ namespace LoginApp
             InitializeComponent();
         }
 
+        public void Songs_click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Songs.xaml", UriKind.Relative));
+        }
+
+        public void Podcast_click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Podcast.xaml", UriKind.Relative));
+        }
+        public void Album_click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Album.xaml", UriKind.Relative));
+        }
+        public void Artists_click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Artists.xaml", UriKind.Relative));
+        }
+
+
     }
 }
