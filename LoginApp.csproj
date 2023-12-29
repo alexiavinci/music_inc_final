@@ -173,6 +173,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Album.xaml.cs">
+      <DependentUpon>Album.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Artists.xaml.cs">
+      <DependentUpon>Artists.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_album.xaml.cs">
+      <DependentUpon>Buy_album.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_podcast.xaml.cs">
+      <DependentUpon>Buy_podcast.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Buy_songs.xaml.cs">
       <DependentUpon>Buy_songs.xaml</DependentUpon>
     </Compile>
@@ -185,6 +197,12 @@
     <Compile Include="Podcast.xaml.cs">
       <DependentUpon>Podcast.xaml</DependentUpon>
     </Compile>
+    <Compile Include="podcast_librairy.xaml.cs">
+      <DependentUpon>podcast_librairy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="see_artists.xaml.cs">
+      <DependentUpon>see_artists.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
@@ -195,6 +213,22 @@
       <DependentUpon>songs_librairy.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Page Include="Album.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Artists.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Buy_album.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Buy_podcast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Buy_songs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -224,6 +258,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Podcast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="podcast_librairy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="see_artists.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -83,39 +83,39 @@ namespace LoginApp
         }
 
         // Method to get all user purchases from the database
-        public static List<UserPurchase> GetAllUserPurchases(string connectionString, int userId)
-        {
-            List<UserPurchase> userPurchases = new List<UserPurchase>();
+        //public static List<UserPurchase> GetAllUserPurchases(string connectionString, int userId)
+        //{
+        //    List<UserPurchase> userPurchases = new List<UserPurchase>();
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
+        //    using (MySqlConnection connection = new MySqlConnection(connectionString))
+        //    {
+        //        connection.Open();
 
-                string query = "SELECT * FROM user_purchase_music WHERE id_user = @UserId";
+        //        string query = "SELECT * FROM user_purchase_music WHERE id_user = @UserId";
 
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@UserId", userId);
+        //        using (MySqlCommand command = new MySqlCommand(query, connection))
+        //        {
+        //            command.Parameters.AddWithValue("@UserId", userId);
 
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Assuming your UserPurchase class has a constructor that takes reader values
-                            UserPurchase purchase = new UserPurchase(
-                                Convert.ToInt32(reader["id_user"]),
-                                Convert.ToInt32(reader["id_music"]),
-                                Convert.ToDateTime(reader["purchase_date"])
-                            );
+        //            using (MySqlDataReader reader = command.ExecuteReader())
+        //            {
+        //                while (reader.Read())
+        //                {
+        //                    // Assuming your UserPurchase class has a constructor that takes reader values
+        //                    UserPurchase purchase = new UserPurchase(
+        //                        Convert.ToInt32(reader["id_user"]),
+        //                        Convert.ToInt32(reader["id_music"]),
+        //                        Convert.ToDateTime(reader["purchase_date"])
+        //                    );
 
-                            userPurchases.Add(purchase);
-                        }
-                    }
-                }
-            }
+        //                    userPurchases.Add(purchase);
+        //                }
+        //            }
+        //        }
+        //    }
 
-            return userPurchases;
-        }
+        //    return userPurchases;
+        //}
 
         //public static void MakeUserMusicPurchaseFromConsole(string connectionString, int userId)
         //{

@@ -16,23 +16,20 @@ using System.Windows.Shapes;
 namespace LoginApp
 {
     /// <summary>
-    /// Logique d'interaction pour Podcast.xaml
+    /// Logique d'interaction pour Artists.xaml
     /// </summary>
-    public partial class Podcast : Page
+    public partial class Artists : Page
     {
-        public Podcast()
+        public Artists()
         {
             InitializeComponent();
         }
 
-        private void Buy_podcast_Click(object sender, RoutedEventArgs e)
+        private void See_Artists_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Buy_podcast.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("see_artists.xaml", UriKind.Relative));
         }
 
-        private void Librairy_podcast_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("podcast_librairy.xaml", UriKind.Relative));
-        }
+        
     }
 }
